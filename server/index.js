@@ -12,17 +12,21 @@ connectDB();
 
 const app = express();
 
-// Use CORS to allow requests from your frontend
+
 const corsOptions = {
-  origin: 'http://localhost:5173',  // Allow requests only from this frontend URL
-  methods: 'GET,POST,PUT,DELETE',  // Allowed HTTP methods
-  credentials: true,  // Allow credentials (cookies, etc.)
+  origin: 'http://localhost:5173',  
+  methods: 'GET,POST,PUT,DELETE',  
+  credentials: true,  
 };
 
-app.use(cors(corsOptions));  // Enable CORS with the specified options
+app.use(cors(corsOptions)); 
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.get("/", (req, res) => {
+
+  res.send("Hello from Vercel!");
+})
 
 app.use('/api/profiles', profileRoutes);
 
