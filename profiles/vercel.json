@@ -1,14 +1,13 @@
 {
     "version": 2,
-    
     "rewrites": [
       {
-        "src": "/api/(.*)",
-        "dest": "https://bynry-six.vercel.app/api/$1"
+        "source": "/api/(.*)",
+        "destination": "https://bynry-six.vercel.app/api/$1"
       },
       {
-        "src": "/(.*)",
-        "dest": "/index.html"
+        "source": "/(.*)",
+        "destination": "/index.html"
       }
     ]
   }
