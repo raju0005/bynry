@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const profileApi = createApi({
   reducerPath: "profileApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000/api/profiles/",
+    baseUrl: "https://bynry-six.vercel.app/api/profiles/",
   }),
   endpoints: (builder) => ({
     createProfile: builder.mutation({
