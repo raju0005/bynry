@@ -3,7 +3,7 @@ import asyncHandler from "../middlewares/asyncHandler.js";
 
 import upload from "../middlewares/multer.js";
 
-// Create Profile
+
 export const createProfile = asyncHandler(async (req, res) => {
   try {
     const { name, address, description } = req.body;
