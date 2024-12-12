@@ -34,7 +34,7 @@ const Profiles = () => {
 
   return (
     <div className="flex flex-col justify-around items-center w-screen h-screen relative">
-      <button className="absolute top-7 right-10  " onClick={handleClick}>
+      <button className="absolute top-7 right-10  transition-transform transform hover:scale-105 " onClick={handleClick}>
         <FaUserPlus className="text-3xl" />
       </button>
       <h2 className="uppercase font-bold text-2xl">Profiles List</h2>
@@ -49,7 +49,7 @@ const Profiles = () => {
         {filteredProfiles?.map((profile) => (
           <div
             key={profile._id}
-            className="bg-gray-300 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 flex flex-col justify-around items-center max-h-[40%] min-w-[40%]  p-2 border-2 border-white rounded-[32px] cursor-pointer shadow-[0_3px_10px_rgb(0,0,0,0.2)] "
+            className="bg-gray-300 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 flex flex-col justify-around items-center max-h-[40%] min-w-[40%]  p-2 border-2 border-white rounded-[32px] cursor-pointer transition-transform transform hover:scale-105 shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
             onClick={() => handleProfileClick(profile._id)}
           >
             <img

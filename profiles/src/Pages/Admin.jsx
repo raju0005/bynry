@@ -64,7 +64,7 @@ const Admin = () => {
           />
           <button
             type="submit"
-            className="ml-2 p-2 btn mt-4 btn-success text-white rounded-md"
+            className="ml-2 p-2 btn mt-4 btn-success text-white rounded-md transition-transform transform hover:scale-105"
           >
             Submit
           </button>
@@ -108,7 +108,7 @@ const Admin = () => {
         <button
           type="submit"
           disabled={isLoading}
-          className="p-2 btn mt-4 btn-success text-white rounded-md"
+          className="p-2 btn mt-4 btn-success text-white rounded-md transition-transform transform hover:scale-105"
         >
           {isLoading ? "Uploading..." : "Submit"}
         </button>

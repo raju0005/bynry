@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import dotenv from 'dotenv';
 import connectDB from './db/db.js';
 import profileRoutes from './routes/profileRoutes.js';
-import cors from 'cors'; // Import the CORS package
+import cors from 'cors';
 
 dotenv.config();
 const port = process.env.PORT || 5000;

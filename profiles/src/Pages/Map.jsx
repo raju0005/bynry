@@ -3,12 +3,12 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { useParams } from "react-router-dom";
 
 const MapPage = () => {
-  const { city } = useParams(); // Get the current URL location
+  const { city } = useParams(); 
   const [coordinates, setCoordinates] = useState(null);
 
   useEffect(() => {
     if (city) {
-      // Fetch coordinates using Nominatim API (OpenStreetMap API)
+   
       const fetchCoordinates = async () => {
         try {
           const response = await fetch(
@@ -38,13 +38,13 @@ const MapPage = () => {
         zoom={13}
         style={{ height: "80vh", width: "80%", boxShadow:'3px' }} 
       >
-        {/* TileLayer - OpenStreetMap */}
+
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution="&copy; OpenStreetMap contributors"
         />
 
-        {/* Marker for the location */}
+       
         <Marker position={[coordinates.lat, coordinates.lon]}>
           <Popup>{`Location of ${city}`}</Popup>
         </Marker>

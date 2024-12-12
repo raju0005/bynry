@@ -31,7 +31,7 @@ const ProfileTab = () => {
         <div className="bg-gradient-to-r from-white to-[#abbaab] relative h-[350px] w-[370px] p-3 flex justify-around gap-3 items-center flex-col rounded-xl border-white border-[3px]">
           <button
             onClick={handleClose}
-            className="absolute top-0 right-0 text-white p-2 rounded-full"
+            className="absolute top-0 right-0 text-white p-2 rounded-full transition-transform transform hover:scale-105"
           >
             <IoCloseCircle className="text-3xl"/>
           </button>
@@ -51,7 +51,7 @@ const ProfileTab = () => {
 
           <button
             onClick={handleSummaryClick}
-            className="btn mt-4 btn-success text-white p-2 rounded"
+            className="btn mt-4 btn-success text-white p-2 rounded transition-transform transform hover:scale-105"
           >
             View Summary
           </button>
