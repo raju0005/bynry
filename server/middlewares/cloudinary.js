@@ -18,8 +18,8 @@ cloudinary.config({
 const storage = new CloudinaryStorage({
   cloudinary,
   params: {
-    folder: 'profile_pictures', // Folder in Cloudinary
-    allowed_formats: ['jpg', 'jpeg', 'png'], // Allowed image formats
+    folder: 'profile_pictures', 
+    allowed_formats: ['jpg', 'jpeg', 'png'], 
   },
 });
 
