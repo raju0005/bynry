@@ -4,6 +4,8 @@ import { selectSelectedProfileId ,resetSelectedProfileId} from "../redux/slices/
 import { useGetProfileByIdQuery } from "../redux/slices/profileApi";
 import { IoCloseCircle } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
+import Loader from "../components/Loader";
+
 
 const ProfileTab = () => {
   const dispatch = useDispatch();
@@ -11,7 +13,8 @@ const ProfileTab = () => {
   const selectedProfileId = useSelector(selectSelectedProfileId);
   const { data, error, isLoading } = useGetProfileByIdQuery(selectedProfileId);
 
-  if (isLoading) return <div>Loading profile...</div>;
+  // if (isLoading) return  <div className="flex justify-center items-center w-screen h-screen"><Loader/></div>;
+
   if (error) return <div>Error fetching profile: {error.message}</div>;
 
   const handleClose = () => {

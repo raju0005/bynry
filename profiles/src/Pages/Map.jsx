@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { useParams } from "react-router-dom";
+import Loader from "../components/Loader";
 
 const MapPage = () => {
   const { city } = useParams(); 
@@ -27,7 +28,7 @@ const MapPage = () => {
     }
   }, [city]);
 
-  if (!coordinates) return <div>Loading map...</div>;
+  if (!coordinates) return <div className="flex justify-center items-center w-screen h-screen"><Loader/></div>;
 
   return (
     <div

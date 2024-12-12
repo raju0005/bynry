@@ -8,6 +8,7 @@ import {
 import ProfileTab from "../components/ProfileTab";
 import { FaUserPlus } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import Loader from "../components/Loader";
 
 const Profiles = () => {
   const dispatch = useDispatch();
@@ -16,7 +17,12 @@ const Profiles = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
 
-  if (isLoading) return <div>Loading profiles...</div>;
+  if (isLoading)
+    return (
+      <div className="flex justify-center items-center w-screen h-screen">
+        <Loader />
+      </div>
+    );
   if (error) return <div>Error fetching profiles: {error.message}</div>;
 
   const handleProfileClick = (profileId) => {
@@ -24,7 +30,7 @@ const Profiles = () => {
   };
 
   const handleClick = () => {
-    navigate("/admin"); 
+    navigate("/admin");
   };
   const filteredProfiles = profiles?.filter(
     (profile) =>
@@ -34,7 +40,10 @@ const Profiles = () => {
 
   return (
     <div className="flex flex-col justify-around items-center w-screen h-screen relative">
-      <button className="absolute top-7 right-10  transition-transform transform hover:scale-105 " onClick={handleClick}>
+      <button
+        className="absolute top-7 right-10  transition-transform transform hover:scale-105 "
+        onClick={handleClick}
+      >
         <FaUserPlus className="text-3xl" />
       </button>
       <h2 className="uppercase font-bold text-2xl">Profiles List</h2>
