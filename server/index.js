@@ -13,9 +13,8 @@ connectDB();
 const app = express();
 
 const corsOptions = {
-  origin: "https://bynry-profiles.vercel.app/",
+  origin: "*",
   methods: "GET,POST,PUT,DELETE",
-  credentials: true,
 };
 
 app.use(cors(corsOptions));
