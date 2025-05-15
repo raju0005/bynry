@@ -85,20 +85,20 @@ const Admin = () => {
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="border border-gray-300 rounded-md p-2 mb-2"
+          className="border border-gray-300 rounded-md p-2 mb-2 w-full"
         />
         <input
           type="text"
           placeholder="Address"
           value={address}
           onChange={(e) => setAddress(e.target.value)}
-          className="border border-gray-300 rounded-md p-2 mb-2"
+          className="border border-gray-300 rounded-md p-2 mb-2 w-full"
         />
         <textarea
           placeholder="Description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          className="border border-gray-300 rounded-md p-2 mb-2"
+          className="border border-gray-300 rounded-md p-2 mb-2 w-full h-28"
         />
         <input
           type="file"
