@@ -12,19 +12,8 @@ connectDB();
 
 const app = express();
 
-const allowedOrigins = [
-  "https://bynry-profiles.vercel.app",
-  "http://localhost:5173/",
-];
-
 const corsOptions = {
-  origin: function (origin, callback) {
-    if (allowedOrigins.includes(origin) || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
+  origin: "*",
   methods: "GET,POST,PUT,DELETE",
   credentials: true,
 };
