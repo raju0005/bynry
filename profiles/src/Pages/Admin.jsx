@@ -57,14 +57,14 @@ const Admin = () => {
               fontSize: "1.5rem",
               borderRadius: "15px",
               border: "2px solid",
-              borderColor: "black",
+              borderColor: "gray",
             }}
             containerStyle={{ gap: "1rem" }}
             inputType="password"
           />
           <button
             type="submit"
-            className="ml-2 p-2 btn mt-4 btn-success text-white rounded-md transition-transform transform hover:scale-105"
+            className="ml-2 py-2 px-4 bg-green-500 mt-4 btn-success text-white rounded-md transition-transform transform hover:scale-105"
           >
             Submit
           </button>
@@ -108,7 +108,7 @@ const Admin = () => {
         <button
           type="submit"
           disabled={isLoading}
-          className="p-2 btn mt-4 btn-success text-white rounded-md transition-transform transform hover:scale-105"
+          className="py-2 px-5 bg-green-500 mt-4 btn-success text-white rounded-md transition-transform transform hover:scale-105"
         >
           {isLoading ? "Uploading..." : "Submit"}
         </button>
